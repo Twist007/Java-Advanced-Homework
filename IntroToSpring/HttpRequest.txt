@@ -1,0 +1,1 @@
+http://localhost:8080/car?brand=Mazda&model=323&hp=300&color=red
