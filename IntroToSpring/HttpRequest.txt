@@ -1,0 +1,4 @@
+http://localhost:8080/calculator/add?firstNumber=10&secNumber=5
+http://localhost:8080/calculator/subtract?firstNumber=20&secNumber=10
+http://localhost:8080/calculator/multiply?firstNumber=6&secNumber=6
+http://localhost:8080/calculator/divide?firstNumber=12&secNumber=4
