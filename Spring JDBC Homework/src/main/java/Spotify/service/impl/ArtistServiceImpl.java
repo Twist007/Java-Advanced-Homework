@@ -3,9 +3,11 @@ package Spotify.service.impl;
 import Spotify.repository.artist.Artist;
 import Spotify.repository.artist.ArtistRepository;
 import Spotify.service.ArtistService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class ArtistServiceImpl implements ArtistService {
 
     private final ArtistRepository artistRepository;

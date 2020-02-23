@@ -13,4 +13,8 @@ public class Song {
     private Date publicationDate;
     private int duration;
     private Artist artist;
+
+    public void playing(){
+        System.out.println("Playing the song!");
+    }
 }

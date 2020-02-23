@@ -7,7 +7,7 @@ import org.springframework.jdbc.datasource.DriverManagerDataSource;
 import javax.sql.DataSource;
 
 @Configuration
-public class JDBSConfig {
+public class JDBCConfig {
 
     @Bean
     public DataSource mysqlDataSource() {

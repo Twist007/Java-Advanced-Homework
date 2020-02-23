@@ -3,9 +3,11 @@ package Spotify.service.impl;
 import Spotify.repository.song.Song;
 import Spotify.repository.song.SongRepository;
 import Spotify.service.SongService;
+import org.springframework.stereotype.Service;
 
 import java.util.List;
 
+@Service
 public class SongServiceImpl implements SongService {
 
     private final SongRepository songRepository;

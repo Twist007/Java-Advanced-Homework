@@ -1,6 +1,5 @@
 package Spotify.repository.user;
 
-import Spotify.repository.song.Song;
 import Spotify.repository.user.mapper.UserRowMapper;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcTemplate;
 
