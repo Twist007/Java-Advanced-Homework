@@ -27,7 +27,7 @@ public class SongServiceImpl implements SongService {
     }
 
     @Override
-    public void update(Song song) {
+    public void updateSong(Song song) {
 
     }
 }

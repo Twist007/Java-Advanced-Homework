@@ -8,11 +8,11 @@ public interface ArtistService {
 
     void addArtist(Artist artist);
 
-    void deleteSong(long id);
+    void deleteArtist(long id);
 
-    Artist getSong(long id);
+    Artist geArtist(long id);
 
     List<Artist> getAllArtist();
 
-    void update(Artist artist);
+    void updateArtist(Artist artist);
 }

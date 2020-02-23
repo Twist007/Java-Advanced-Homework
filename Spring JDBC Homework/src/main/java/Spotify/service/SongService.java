@@ -14,5 +14,5 @@ public interface SongService {
 
     List<Song> getAllSong();
 
-    void update(Song song);
+    void updateSong(Song song);
 }

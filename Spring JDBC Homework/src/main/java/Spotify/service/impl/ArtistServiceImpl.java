@@ -27,7 +27,7 @@ public class ArtistServiceImpl implements ArtistService {
     }
 
     @Override
-    public void update(Artist artist) {
+    public void updateArtist(Artist artist) {
 
     }
 }
