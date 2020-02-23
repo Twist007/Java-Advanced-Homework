@@ -16,6 +16,7 @@ public class SongController {
         this.songService = songService;
     }
 
+    @PostMapping
     public void addSong(@RequestBody final Song song) {
         songService.addSong(song);
     }

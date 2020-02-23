@@ -16,6 +16,8 @@ public class ArtistController {
         this.artistService = artistService;
     }
 
+
+    @PostMapping
     public void addArtist(@RequestBody final Artist artist) {
         artistService.addArtist(artist);
     }
