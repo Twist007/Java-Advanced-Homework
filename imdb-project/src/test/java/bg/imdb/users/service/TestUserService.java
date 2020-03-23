@@ -4,7 +4,6 @@ package bg.imdb.users.service;
 import bg.imdb.exceptions.HttpUnauthorizedException;
 import bg.imdb.users.model.UserModel;
 import bg.imdb.users.rest.LoginResponse;
-import bg.imdb.users.service.UserService;
 import lombok.extern.log4j.Log4j2;
 import org.junit.Test;
 import org.junit.runner.RunWith;
