@@ -7,7 +7,6 @@ import org.springframework.boot.test.context.SpringBootTest;
 import org.springframework.test.context.ActiveProfiles;
 import org.springframework.test.context.junit4.SpringRunner;
 import spotify.artists.models.ArtistModel;
-import spotify.artists.service.ArtistService;
 
 import java.time.LocalDate;
 

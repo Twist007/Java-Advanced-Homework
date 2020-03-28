@@ -9,7 +9,6 @@ import org.springframework.test.context.junit4.SpringRunner;
 import spotify.artists.models.ArtistModel;
 import spotify.artists.service.ArtistService;
 import spotify.songs.models.SongModel;
-import spotify.songs.service.SongService;
 
 import java.time.LocalDate;
 
