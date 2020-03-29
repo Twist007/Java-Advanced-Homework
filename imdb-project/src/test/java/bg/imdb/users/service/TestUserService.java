@@ -39,7 +39,7 @@ public class TestUserService {
 
     @Test
     public void testLoginUser() {
-        final UserModel model = new UserModel(null, "test", "password", "Test", "User");
+        final UserModel model = new UserModel(null, "test2", "password", "Test2", "User");
 
         final UserModel created = userService.registerUser(model);
 
