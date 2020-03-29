@@ -44,11 +44,11 @@ public class MovieController {
         movieService.deleteMovie(id);
     }
 
-    @PostMapping("recipe/{id}/image")
+    @PostMapping("movie/{id}/image")
     public String handleImagePost(@PathVariable String id, @RequestParam("imagefile") MultipartFile file){
 
-        movieService.saveImageFile(Long.valueOf(id), file);
+        movieService.saveImageFile(id, file);
 
-        return "redirect:/recipe/" + id + "/show";
+        return "redirect:/movie/" + id + "/show";
     }
 }

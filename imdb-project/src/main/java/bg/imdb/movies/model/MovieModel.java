@@ -1,6 +1,6 @@
 package bg.imdb.movies.model;
 
-import bg.imdb.actor.entities.Actor;
+import bg.imdb.actors.entities.Actor;
 import bg.imdb.users.model.UserModel;
 import lombok.AllArgsConstructor;
 import lombok.Data;
@@ -21,7 +21,7 @@ public class MovieModel {
 
     private double rating;
 
-    private Set<Actor> actorList;
+    private String actorList;
 
     private String genre;
 

@@ -1,6 +1,6 @@
 package bg.imdb.movies.entities;
 
-import bg.imdb.actor.entities.Actor;
+import bg.imdb.actors.entities.Actor;
 import bg.imdb.users.entities.User;
 import lombok.Data;
 import org.hibernate.annotations.GenericGenerator;
@@ -31,11 +31,11 @@ public class Movie {
     private double rating;
 
     @ManyToMany(fetch = FetchType.EAGER)
-    @JoinTable(name = "actors",
+    @JoinTable(name = "movie_actors",
             joinColumns = {@JoinColumn(name = "movie_id", nullable = false,
-                    foreignKey = @ForeignKey(name = "fk_actors_movies"))},
+                    foreignKey = @ForeignKey(name = "fk_movie_id"))},
             inverseJoinColumns = {@JoinColumn(name = "actor_id", nullable = false,
-                    foreignKey = @ForeignKey(name = "fk_actors"))})
+                    foreignKey = @ForeignKey(name = "fk_actor_id"))})
     private Set<Actor> actorList;
 
     @Column(nullable = false)

@@ -120,7 +120,6 @@ public class MovieServiceImpl implements MovieService {
 
             movieRepository.save(movie);
         } catch (IOException e) {
-            //TODO handle better
             log.error("Error occurred while saving image! ", e);
 
             e.printStackTrace();

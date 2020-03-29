@@ -1,16 +1,29 @@
 package bg.imdb.movies.service.converters;
 
-import bg.imdb.actor.entities.Actor;
+import bg.imdb.actors.entities.Actor;
+import bg.imdb.actors.service.ActorService;
 import bg.imdb.movies.entities.Movie;
 import bg.imdb.movies.model.MovieModel;
+import bg.imdb.users.service.converters.UserConverter;
 import com.mysql.cj.util.StringUtils;
+import org.springframework.stereotype.Component;
 
 import java.util.*;
 
 import static java.util.stream.Collectors.toList;
 import static java.util.stream.Collectors.toSet;
 
+@Component
 public class MovieConverter {
+
+    private final UserConverter userConverter;
+    private final ActorService actorService;
+
+    public MovieConverter(final UserConverter userConverter,
+                        final ActorService actorService) {
+        this.userConverter = userConverter;
+        this.actorService = actorService;
+    }
 
     public MovieModel convertToModel(final Movie movie) {
         if (movie == null) {
@@ -22,10 +35,11 @@ public class MovieConverter {
         model.setName(movie.getName());
         model.setYear(movie.getYear());
         model.setRating(movie.getRating());
-        model.setActorList(movie.getActorList());
+        model.setActorList(toActors(movie.getActorList()));
         model.setGenre(movie.getGenre());
         model.setImage(movie.getImage());
         model.setVideoLink(movie.getVideoLink());
+        model.setUser(userConverter.convertToModel(movie.getUser()));
 
         return model;
     }
@@ -47,9 +61,10 @@ public class MovieConverter {
         movie.setName(model.getName());
         movie.setYear(model.getYear());
         movie.setRating(model.getRating());
-        movie.setActorList(model.getActorList());
+        movie.setActorList(createActorsIfMissing(model.getActorList()));
         movie.setGenre(model.getGenre());
         movie.setImage(model.getImage());
+        movie.setUser(userConverter.convertToEntity(model.getUser()));
         movie.setVideoLink(model.getVideoLink());
 
         return movie;
@@ -76,7 +91,7 @@ public class MovieConverter {
             if (byName != null) {
                 entities.add(byName);
             } else {
-                entities.add(actorService.create(extra));
+                entities.add(actorService.createActor(extra));
             }
         });
 

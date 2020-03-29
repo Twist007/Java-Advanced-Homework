@@ -13,7 +13,7 @@ public class MovieAccessValidator {
         this.movieService = movieService;
     }
 
-    void validateUserCanEditMovie(final String userId, final String movieId) {
+    public void validateUserCanEditMovie(final String userId, final String movieId) {
         if (userId == null || movieId == null) {
             throw new HttpForbiddenException();
         }
